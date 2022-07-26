@@ -7,7 +7,7 @@ const { isUser, isAdmin, isRegistered } = require("../../middlewares/auth");
 UserRoutes.post('/', postNewUser);
 UserRoutes.post('/login', loginUser);
 UserRoutes.post('/logout', logoutUser);
-UserRoutes.get('/', [isRegistered], getUsers);
+UserRoutes.get('/', getUsers);
 UserRoutes.get('/:id', [isRegistered], getUser);
 UserRoutes.patch('/:id', [isRegistered], patchUser);
 UserRoutes.delete('/:id', [isAdmin], deleteUser);
